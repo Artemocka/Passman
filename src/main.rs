@@ -1,4 +1,5 @@
 use eframe;
+use eframe::egui;
 
 mod ui;
 mod password;
@@ -8,11 +9,12 @@ use ui::Application;
 
 fn main() -> eframe::Result<()> {
 
-    let native_options = eframe::NativeOptions::default();
+    let mut native_options = eframe::NativeOptions::default();
+    native_options.min_window_size= Some(egui::Vec2::new(820.,600.));
     eframe::run_native(
         "Passman",
         native_options,
-        Box::new(|cc| Box::new(Application::new(cc))),
+        Box::new(|cc| Box::new(Application::new())),
     )
 }
 

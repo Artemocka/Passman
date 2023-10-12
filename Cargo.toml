@@ -8,3 +8,6 @@ edition = "2021"
 [dependencies]
 eframe = "0.22.0"
 rand = { version = "0.8.5", features = [] }
+csv = "1.2.2"
+arboard = "3.2.1"
+egui-notify = "0.8"
