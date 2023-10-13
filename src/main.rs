@@ -14,7 +14,7 @@ fn main() -> eframe::Result<()> {
     eframe::run_native(
         "Passman",
         native_options,
-        Box::new(|cc| Box::new(Application::new())),
+        Box::new(|_cc| Box::new(Application::new())),
     )
 }
 
